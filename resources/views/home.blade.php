@@ -1,14 +1,56 @@
 @extends('master')
 @section('title', 'Home')
 @section('content')
-    <div class="container">
-        <div class="row banner">
-            <div style="margin-top: 100px"class="col-md-12">
-                <h1 class="text-center margin-top-100 editContent">Hãy đăng nhập</h1>
-                <button type="button">Đăng nhập</button>
-                    <img src="/images/background.jpg" width="100%" height="100%" alt="">
+<div class="container">
+  <div id="myCarousel" class="carousel slide " data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators ">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner ">
+      <div class="item active ">
+        <img src="images/background.jpg" alt="background" >
+            <div class="carousel-caption">
+                <h3>Framgia Lab</h3>
+                <p>{!! trans('main.Address') !!}</p>
             </div>
-        </div>
+
+      </div>
+
+      <div class="item ">
+        <img src="images/slide2.jpg" alt="example1" >
+      </div>
+    
+      <div class="item ">
+        <img src="images/slide3.jpg" alt="example2">
+      </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div class="btn-group  btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group " role="group">
+    <button type="button" class="btn btn-primary">{!! trans('main.Salons') !!}</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary">{!! trans('main.Booking') !!}</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary">{!! trans('main.Stylists') !!}</button>
+  </div>
+</div>
 @endsection
 

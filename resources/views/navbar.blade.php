@@ -1,38 +1,41 @@
-<nav class="navbar navbar-default navbar-fixed-top" id="fh5co-header">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
+        
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#myPage"><img src="{{ asset('logo/cutmypic.png') }}" id="image_logo"></a>
+            <a class="navbar-brand" href="#"><img src="{{ asset('images/logo1.png') }}"</a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
+        
+        <!-- Navbar Right -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="active"><a href="/">{!! trans('main.Home') !!}</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Member 
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    {!! trans('main.Member') !!} 
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 
                     @if (Auth::check())
                         @role('manager')
-                            <li><a href="/admin">Admin</a></li>
+                            <li><a href="/admin">{!! trans('main.Admin') !!}</a></li>
                         @endrole
-                        <li><a href="/users/logout">Logout</a></li>
+                        <li><a href="/users/logout">{!! trans('main.Logout') !!}</a></li>
                     @else
-                        <li><a href="/users/register">Register</a></li>
-                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/users/register">{!! trans('main.Register') !!}</a></li>
+                        <li><a href="/users/login">{!! trans('main.Login') !!}</a></li>
                     @endif
 
                     </ul>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
 
+    </div><!-- /.container-fluid -->
+</nav>
