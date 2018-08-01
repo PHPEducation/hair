@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ Html::style('bower_components\bootstrap\dist\css\bootstrap.css') }}
-    {{ Html::style('css\\style.css') }}
+    {{ Html::style('css\style.css') }}
 
 
 </head>
